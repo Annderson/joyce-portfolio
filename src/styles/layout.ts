@@ -17,4 +17,14 @@ const Container = styled.div`
   display: flex;
 `
 
-export default { CenteredHorizontal, CenteredVertical, Container }
+const ContainerVertical = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+export default {
+  CenteredHorizontal,
+  CenteredVertical,
+  Container,
+  ContainerVertical,
+}
