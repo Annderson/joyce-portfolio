@@ -11,13 +11,17 @@ export const Root = styled(Layout.ContainerVertical)`
 `
 export const Container = styled(Layout.ContainerVertical)`
   align-items: center;
+  justify-content: space-evenly;
   background-color: ${Colors.black};
   color: ${Colors.black};
   height: ${Dimensions.vh.sizeVh100};
-  justify-content: space-between;
   overflow: hidden;
-  padding: 40px 0px 50px 0px;
+  padding: 0px 0px 50px 0px;
   position: relative;
+
+  @media (max-width: 700px) {
+    height: 100%;
+  }
 `
 
 export const BackgroundImage = styled.img`
@@ -30,15 +34,15 @@ export const BackgroundImage = styled.img`
 export const PhotoContainer = styled.div`
   background-color: ${Colors.white};
   border-radius: ${Dimensions.per.sizeHalf};
-  box-shadow: 1px 1px 14px 3px #aaa;
-  height: ${Dimensions.px.size170};
-  margin: 0 auto;
-  width: ${Dimensions.px.size170};
+  //box-shadow: 1px 1px 14px 3px #aaa;
+  height: ${Dimensions.px.size200};
+  margin-top: ${Dimensions.px.size40};
+  width: ${Dimensions.px.size200};
   img {
     border: ${Dimensions.px.size5} solid ${Colors.white};
     border-radius: ${Dimensions.per.sizeHalf};
-    height: ${Dimensions.px.size170};
-    width: ${Dimensions.px.size170};
+    height: ${Dimensions.px.size200};
+    width: ${Dimensions.px.size200};
   }
 `
 
@@ -56,10 +60,32 @@ export const Description = styled.h4`
   }
 `
 
-export const MyDataContainer = styled(Layout.ContainerVertical)`
-  grid-gap: 20px;
+export const MyDataContainer = styled(Layout.Container)`
+  justify-content: flex-start;
   max-width: 90%;
   width: 100%;
+
+  @media (max-width: 700px) {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    grid-gap: 10px;
+    margin: 30px auto;
+  }
+
+  img {
+    height: 180px;
+    width: 200px;
+    @media (max-width: 700px) {
+      height: 130px;
+      width: 150px;
+    }
+  }
+
+  > div {
+    display: grid;
+    grid-gap: 20px;
+  }
 `
 
 export const TextName = styled.h2`
@@ -68,8 +94,11 @@ export const TextName = styled.h2`
   color: ${Colors.white};
   font-size: ${Dimensions.px.size60};
   font-weight: 500;
-  line-height: 30px;
+  line-height: 50px;
   text-align: left;
+  @media (max-width: 700px) {
+    text-align: center;
+  }
 `
 
 export const TextAge = styled.h4`
@@ -78,6 +107,9 @@ export const TextAge = styled.h4`
   font-weight: 100;
   line-height: 30px;
   text-align: left;
+  @media (max-width: 700px) {
+    text-align: center;
+  }
 `
 
 export const BackgroundTransparent = styled(Layout.CenteredVertical)`
@@ -93,6 +125,10 @@ export const TabContainer = styled(Layout.CenteredHorizontal)`
   display: grid;
   grid-template-columns: 50% 50%;
   width: 100%;
+
+  @media (max-width: 700px) {
+    grid-template-columns: 100%;
+  }
 `
 
 export const TabContainerAbout = styled(Layout.CenteredVertical)`
@@ -118,7 +154,16 @@ export const SubTitleAbout = styled.h2`
   line-height: 40px;
 `
 
-export const ReerectAboutIcon = styled(BsArrowRightSquareFill)`
+export const RedirectAboutButton = styled.button`
+  background-color: ${Colors.transparent};
+  border: none;
+  color: ${Colors.white};
+  :hover {
+    color: ${Colors.transparentWhiteAa};
+  }
+`
+
+export const RedirectAboutIcon = styled(BsArrowRightSquareFill)`
   border-radius: 8px;
   box-shadow: 0px 0px 3px 1px #555;
   color: ${Colors.white};
@@ -138,7 +183,7 @@ export const Carousel = styled(CarouselCurrent)`
   overflow: hidden;
 
   .carousel .slide {
-  } 
+  }
   .control-next.control-arrow {
     right: 50px;
   }

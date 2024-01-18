@@ -6,6 +6,7 @@ import tecnicas from '@/assets/img/tecnicas.png'
 import project from '@/assets/img/project.png'
 import urbanist from '@/assets/img/urbanist.png'
 import inst from '@/assets/img/inst.png'
+import logo from '@/assets/svg/vite.svg'
 
 import Menu from '@/presentation/components/Menu'
 import { Colors, Dimensions } from '@/styles'
@@ -24,11 +25,15 @@ const Home = () => {
       <S.Root>
         <S.Container>
           <S.PhotoContainer>
-            <img src={photo} alt='foto de rostoß' />
+            <img src={photo} alt="foto de rosto" />
           </S.PhotoContainer>
           <S.MyDataContainer>
-            <S.TextName>Joyce Abeid</S.TextName>
-            <S.TextAge>30 anos, casada</S.TextAge>
+            <img src={logo} alt="foto de rosto" />
+
+            <div>
+              <S.TextName>Joyce Abeid</S.TextName>
+              <S.TextAge>30 anos, casada</S.TextAge>
+            </div>
           </S.MyDataContainer>
           <S.Description>{locales.description}</S.Description>
         </S.Container>
@@ -58,17 +63,19 @@ const Home = () => {
             </div>
             <S.GridTextIconContainer>
               <S.Description>Para saber mais clique aqui</S.Description>
-              <S.ReerectAboutIcon
+              <S.RedirectAboutButton
                 onClick={() => onNavigate(RoutesName.About)}
-              />
+              >
+                <S.RedirectAboutIcon />
+              </S.RedirectAboutButton>
             </S.GridTextIconContainer>
           </S.BackgroundTransparent>
         </S.TabContainer>
         <S.Carousel
+          stopOnHover
           autoPlay
           infiniteLoop
           showArrows
-          verticalSwipe="natural"
           axis="vertical"
           showThumbs={false}
         >
@@ -76,36 +83,44 @@ const Home = () => {
             <S.SlideImg src={tecnicas} />
             <S.SlideLegend>
               Técnicas construtivas
-              <S.ReerectAboutIcon
+              <S.RedirectAboutButton
                 onClick={() => onNavigate(RoutesName.Projects)}
-              />
+              >
+                <S.RedirectAboutIcon />
+              </S.RedirectAboutButton>
             </S.SlideLegend>
           </S.Slide>
           <S.Slide>
             <S.SlideImg src={project} />
             <S.SlideLegend>
               Projetos
-              <S.ReerectAboutIcon
+              <S.RedirectAboutButton
                 onClick={() => onNavigate(RoutesName.Projects)}
-              />
+              >
+                <S.RedirectAboutIcon />
+              </S.RedirectAboutButton>
             </S.SlideLegend>
           </S.Slide>
           <S.Slide>
             <S.SlideImg src={urbanist} />
             <S.SlideLegend>
               Urbanismo
-              <S.ReerectAboutIcon
+              <S.RedirectAboutButton
                 onClick={() => onNavigate(RoutesName.Projects)}
-              />
+              >
+                <S.RedirectAboutIcon />
+              </S.RedirectAboutButton>
             </S.SlideLegend>
           </S.Slide>
           <S.Slide>
             <S.SlideImg src={inst} />
             <S.SlideLegend>
               Instalações
-              <S.ReerectAboutIcon
+              <S.RedirectAboutButton
                 onClick={() => onNavigate(RoutesName.Projects)}
-              />
+              >
+                <S.RedirectAboutIcon />
+              </S.RedirectAboutButton>
             </S.SlideLegend>
           </S.Slide>
         </S.Carousel>

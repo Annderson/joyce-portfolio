@@ -9,10 +9,11 @@ const About = () => (
   <Menu>
     <S.Root>
       <S.IntroductionContainer>
+        <S.Header />
         <S.IntroductionTitle>Introdução sobre mim</S.IntroductionTitle>
         <S.IntroductionDescriptionContainer>
           <div>
-            <div>
+            <div style={{ display: 'flex', justifyContent: 'flex-start'}}>
               <S.HighlighterIcon />
               <S.IntroductionDescription>
                 Estudante em reta final de conclusão de curso superior, o curso
@@ -21,7 +22,7 @@ const About = () => (
                 UNIVERSIDADE CATÓLICA DE CAMPINAS).
               </S.IntroductionDescription>
             </div>
-            <div>
+            <div style={{ display: 'flex', justifyContent: 'flex-end'}}>
               <S.HighlighterIcon />
               <S.IntroductionDescription>
                 Apaixonada por arte, antes de me matricular em Arquitetura,
@@ -31,7 +32,7 @@ const About = () => (
                 arquitetura.
               </S.IntroductionDescription>
             </div>
-            <div>
+            <div style={{ display: 'flex', justifyContent: 'flex-start'}}>
               <S.HighlighterIcon />
               <S.IntroductionDescription>
                 Já atuei com projetos sociais nas comunidades de Campinas, a ONG
@@ -55,44 +56,6 @@ const About = () => (
       </S.IntroductionContainer>
       <S.SkillsContainer>
         <S.IntroductionTitle>Habilidades</S.IntroductionTitle>
-        <S.SkillsBody>
-          <S.SkillsTitleContainer>
-            <S.HighlighterIcon />
-            <S.SubTile>IDIOMAS</S.SubTile>
-          </S.SkillsTitleContainer>
-          <S.SkillsContentContainer>
-            <div>
-              <S.Text>Postuguês</S.Text>
-              <div>
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-              </div>
-            </div>
-            <div>
-              <S.Text>Inglês</S.Text>
-              <div>
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircleHalfStroke color={Colors.orange} size={20} />
-              </div>
-            </div>
-            <div>
-              <S.Text>Espanhol</S.Text>
-              <div>
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircleHalfStroke color={Colors.orange} size={20} />
-                <FaRegCircle color={Colors.orange} size={20} />
-                <FaRegCircle color={Colors.orange} size={20} />
-                <FaRegCircle color={Colors.orange} size={20} />
-              </div>
-            </div>
-          </S.SkillsContentContainer>
-        </S.SkillsBody>
         <S.SkillsBody>
           <S.SkillsTitleContainer>
             <S.HighlighterIcon />
@@ -166,6 +129,44 @@ const About = () => (
                 <FaCircle color={Colors.orange} size={20} />
                 <FaCircle color={Colors.orange} size={20} />
                 <FaCircleHalfStroke color={Colors.orange} size={20} />
+                <FaRegCircle color={Colors.orange} size={20} />
+              </div>
+            </div>
+          </S.SkillsContentContainer>
+        </S.SkillsBody>
+        <S.SkillsBody>
+          <S.SkillsTitleContainer>
+            <S.HighlighterIcon />
+            <S.SubTile>IDIOMAS</S.SubTile>
+          </S.SkillsTitleContainer>
+          <S.SkillsContentContainer>
+            <div>
+              <S.Text>Postuguês</S.Text>
+              <div>
+                <FaCircle color={Colors.orange} size={20} />
+                <FaCircle color={Colors.orange} size={20} />
+                <FaCircle color={Colors.orange} size={20} />
+                <FaCircle color={Colors.orange} size={20} />
+                <FaCircle color={Colors.orange} size={20} />
+              </div>
+            </div>
+            <div>
+              <S.Text>Inglês</S.Text>
+              <div>
+                <FaCircle color={Colors.orange} size={20} />
+                <FaCircle color={Colors.orange} size={20} />
+                <FaCircle color={Colors.orange} size={20} />
+                <FaCircle color={Colors.orange} size={20} />
+                <FaCircleHalfStroke color={Colors.orange} size={20} />
+              </div>
+            </div>
+            <div>
+              <S.Text>Espanhol</S.Text>
+              <div>
+                <FaCircle color={Colors.orange} size={20} />
+                <FaCircleHalfStroke color={Colors.orange} size={20} />
+                <FaRegCircle color={Colors.orange} size={20} />
+                <FaRegCircle color={Colors.orange} size={20} />
                 <FaRegCircle color={Colors.orange} size={20} />
               </div>
             </div>

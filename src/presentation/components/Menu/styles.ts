@@ -44,7 +44,7 @@ export const ContentContainer = styled.div`
 
 export const MenuCloseContainer = styled.div`
   display: flex;
-  background-color: #843c22;
+  background-color: #130;
   box-shadow: 2px 0px 9px 1px #888;
   height: ${Dimensions.vh.sizeVh100};
   justify-content: center;
