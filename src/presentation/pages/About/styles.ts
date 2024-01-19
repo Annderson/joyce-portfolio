@@ -12,12 +12,14 @@ export const Root = styled(Layout.ContainerVertical)`
 export const IntroductionContainer = styled(Layout.ContainerVertical)`
   min-height: ${Dimensions.vh.sizeVh100};
   padding: ${Dimensions.px.size0};
+  position: relative;
 `
 
 export const Header = styled.div`
   background-color: ${Colors.orange};
   height: ${Dimensions.px.size70};
   width: 100%;
+  z-index: 2;
 `
   
 
@@ -26,9 +28,9 @@ export const IntroductionTitle = styled.h3`
   color: ${Colors.black};
   font-size: ${Dimensions.px.size50};
   font-weight: 500;
-  margin-bottom: ${Dimensions.px.size25};
   padding: ${Dimensions.px.size50} ${Dimensions.px.size12};
   text-align: center;
+  z-index: 2;
   @media (max-width: 700px) {
     font-size: ${Dimensions.px.size40};
   }
@@ -39,12 +41,14 @@ export const IntroductionDescriptionContainer = styled.div`
   min-height: 80vh;
   justify-content: center;
   grid-gap: ${Dimensions.px.size40};
+  position: relative;
   > div {
+    background-color: ${Colors.white}22;
     display: grid;
     grid-gap: ${Dimensions.px.size20};
-    max-width: 90%;
-    padding: 16px 16px 16px 6px;
-    border-radius: ${Dimensions.px.size10};
+    max-width: 100%;
+    padding: 35px 16px 30px 6px;
+    z-index: 2;
     > div {
       display: grid;
       grid-template-columns: 10% 90%;
@@ -54,10 +58,13 @@ export const IntroductionDescriptionContainer = styled.div`
       }
     }
   }
+`
 
-  @media (max-width: 700px) {
-    margin-bottom: ${Dimensions.px.size40};
-  }
+export const FolderImg = styled.img`
+  position: absolute;
+  height: ${Dimensions.per.sizeFull};
+  width: ${Dimensions.per.sizeFull};
+  z-index: 1;
 `
 
 export const HighlighterIcon = styled(TbArrowBadgeRightFilled)`
@@ -84,44 +91,7 @@ export const SkillsContainer = styled(Layout.ContainerVertical)`
   grid-gap: ${Dimensions.px.size40};
   min-height: ${Dimensions.vh.sizeVh100};
   padding: ${Dimensions.px.size0};
-`
-
-export const SkillsBody = styled(Layout.ContainerVertical)`
-  grid-gap: ${Dimensions.px.size20};
-  padding: 16px;
-`
-
-export const SkillsTitleContainer = styled.div`
-  align-items: center;
-  display: flex;
-  grid-gap: ${Dimensions.px.size10};
-`
-
-export const SkillsContentContainer = styled(Layout.ContainerVertical)`
-  grid-gap: ${Dimensions.px.size15};
-  margin-left: ${Dimensions.px.size20};
-  > div {
-    align-items: center;
-    display: flex;
-    grid-gap: 30px;
-    > div {
-      align-items: center;
-      display: flex;
-      grid-gap: 10px;
-    }
+  margin-bottom: ${Dimensions.px.size50};
+  @media (max-width: 700px) {
   }
-`
-
-export const SubTile = styled.h4`
-  color: ${Colors.orange};
-  font-family: 'Voltaire';
-  font-size: ${Dimensions.px.size30};
-  font-weight: 500;
-`
-
-export const Text = styled.h6`
-  color: ${Colors.black};
-  font-family: 'Voltaire';
-  font-size: ${Dimensions.px.size20};
-  min-width: ${Dimensions.px.size80};
 `

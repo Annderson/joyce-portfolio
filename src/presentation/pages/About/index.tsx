@@ -1,19 +1,22 @@
-import { FaDotCircle, FaCircle } from 'react-icons/fa'
-import { FaRegCircle, FaCircleHalfStroke } from 'react-icons/fa6'
+import { FaDotCircle } from 'react-icons/fa'
 import Menu from '@/presentation/components/Menu'
+import { Colors } from '@/styles'
+import folder from '@/assets/img/folder3.jpeg'
 
 import * as S from './styles'
-import { Colors } from '@/styles'
+import { knowledgeList, languagesList } from './helper'
+import Skills from './components/Skills'
 
 const About = () => (
   <Menu>
     <S.Root>
       <S.IntroductionContainer>
+        <S.FolderImg src={folder} />
         <S.Header />
         <S.IntroductionTitle>Introdução sobre mim</S.IntroductionTitle>
         <S.IntroductionDescriptionContainer>
           <div>
-            <div style={{ display: 'flex', justifyContent: 'flex-start'}}>
+            <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
               <S.HighlighterIcon />
               <S.IntroductionDescription>
                 Estudante em reta final de conclusão de curso superior, o curso
@@ -22,7 +25,7 @@ const About = () => (
                 UNIVERSIDADE CATÓLICA DE CAMPINAS).
               </S.IntroductionDescription>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'flex-end'}}>
+            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
               <S.HighlighterIcon />
               <S.IntroductionDescription>
                 Apaixonada por arte, antes de me matricular em Arquitetura,
@@ -32,7 +35,7 @@ const About = () => (
                 arquitetura.
               </S.IntroductionDescription>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'flex-start'}}>
+            <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
               <S.HighlighterIcon />
               <S.IntroductionDescription>
                 Já atuei com projetos sociais nas comunidades de Campinas, a ONG
@@ -56,122 +59,8 @@ const About = () => (
       </S.IntroductionContainer>
       <S.SkillsContainer>
         <S.IntroductionTitle>Habilidades</S.IntroductionTitle>
-        <S.SkillsBody>
-          <S.SkillsTitleContainer>
-            <S.HighlighterIcon />
-            <S.SubTile>CONHECIMENTOS</S.SubTile>
-          </S.SkillsTitleContainer>
-          <S.SkillsContentContainer>
-            <div>
-              <S.Text>Autocad</S.Text>
-              <div>
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircleHalfStroke color={Colors.orange} size={20} />
-                <FaRegCircle color={Colors.orange} size={20} />
-              </div>
-            </div>
-            <div>
-              <S.Text>Sketchup</S.Text>
-              <div>
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircleHalfStroke color={Colors.orange} size={20} />
-                <FaRegCircle color={Colors.orange} size={20} />
-              </div>
-            </div>
-            <div>
-              <S.Text>Lumion 8.0</S.Text>
-              <div>
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaRegCircle color={Colors.orange} size={20} />
-              </div>
-            </div>
-            <div>
-              <S.Text>Revit</S.Text>
-              <div>
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircleHalfStroke color={Colors.orange} size={20} />
-                <FaRegCircle color={Colors.orange} size={20} />
-                <FaRegCircle color={Colors.orange} size={20} />
-                <FaRegCircle color={Colors.orange} size={20} />
-              </div>
-            </div>
-            <div>
-              <S.Text>Corel Draw</S.Text>
-              <div>
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-              </div>
-            </div>
-            <div>
-              <S.Text>Photoshop</S.Text>
-              <div>
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaRegCircle color={Colors.orange} size={20} />
-                <FaRegCircle color={Colors.orange} size={20} />
-              </div>
-            </div>
-            <div>
-              <S.Text>Illustrator</S.Text>
-              <div>
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircleHalfStroke color={Colors.orange} size={20} />
-                <FaRegCircle color={Colors.orange} size={20} />
-              </div>
-            </div>
-          </S.SkillsContentContainer>
-        </S.SkillsBody>
-        <S.SkillsBody>
-          <S.SkillsTitleContainer>
-            <S.HighlighterIcon />
-            <S.SubTile>IDIOMAS</S.SubTile>
-          </S.SkillsTitleContainer>
-          <S.SkillsContentContainer>
-            <div>
-              <S.Text>Postuguês</S.Text>
-              <div>
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-              </div>
-            </div>
-            <div>
-              <S.Text>Inglês</S.Text>
-              <div>
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircleHalfStroke color={Colors.orange} size={20} />
-              </div>
-            </div>
-            <div>
-              <S.Text>Espanhol</S.Text>
-              <div>
-                <FaCircle color={Colors.orange} size={20} />
-                <FaCircleHalfStroke color={Colors.orange} size={20} />
-                <FaRegCircle color={Colors.orange} size={20} />
-                <FaRegCircle color={Colors.orange} size={20} />
-                <FaRegCircle color={Colors.orange} size={20} />
-              </div>
-            </div>
-          </S.SkillsContentContainer>
-        </S.SkillsBody>
+        <Skills title='CONHECIMENTOS' data={knowledgeList}/>
+        <Skills title='IDIOMAS' data={languagesList}/>
       </S.SkillsContainer>
     </S.Root>
   </Menu>
