@@ -13,7 +13,6 @@ const fadeIn = keyframes`
 	100% {
 		opacity: 1;
 	}
-
 `
 
 export const Container = styled.div`
@@ -21,7 +20,7 @@ export const Container = styled.div`
   animation-name: ${fadeIn};
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
-	animation-duration: 2s;
+	animation-duration: 1.5s;
   display: flex;
   opacity: 1;
   overflow: hidden;
@@ -133,11 +132,11 @@ export const RouterContainer = styled(Layout.ContainerVertical)`
 `
 
 interface MenuItemProp {
-  isActive: boolean
+  isactive: boolean
 }
 export const MenuItem = styled.h3<MenuItemProp>`
-  background-color: ${({ isActive }) =>
-    isActive ? Colors.transparentBlack55 : Colors.transparent};
+  background-color: ${({ isactive }) =>
+    isactive ? Colors.transparentBlack55 : Colors.transparent};
   padding: 5px 16px;
   border-radius: 5px;
   color: ${Colors.white};

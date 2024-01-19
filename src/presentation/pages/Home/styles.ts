@@ -21,6 +21,7 @@ export const Container = styled(Layout.ContainerVertical)`
 
   @media (max-width: 700px) {
     height: 100%;
+    grid-gap: 40px;
   }
 `
 
@@ -69,7 +70,7 @@ export const MyDataContainer = styled(Layout.Container)`
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    grid-gap: 10px;
+    grid-gap: 40px;
     margin: 30px auto;
   }
 
@@ -118,6 +119,10 @@ export const BackgroundTransparent = styled(Layout.CenteredVertical)`
   height: 100%;
   padding: 25px;
   width: 100%;
+  @media (max-width: 700px) {
+    grid-gap: 40px;
+    padding: 50px 25px;
+  }
 `
 
 export const TabContainer = styled(Layout.CenteredHorizontal)`

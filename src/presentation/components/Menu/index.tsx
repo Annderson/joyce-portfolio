@@ -11,7 +11,7 @@ const Menu = ({ children }: any) => {
     <S.Container>
       {open ? (
         <S.MenuOpenContainer>
-          <S.BackgroundContainer />
+          <S.BackgroundContainer onClick={onOpen} />
           <S.MenuContainer>
             <S.IconButton onClick={onOpen}>
               <S.CloseIcon />
@@ -19,7 +19,7 @@ const Menu = ({ children }: any) => {
 
             <S.MenuItem
               id={RoutesName.Home}
-              isActive={currentRoute === RoutesName.Home}
+              isactive={currentRoute === RoutesName.Home.toString()}
               onClick={onNavigate}
             >
               {locales.home.toUpperCase()}
@@ -28,21 +28,21 @@ const Menu = ({ children }: any) => {
             <S.RouterContainer>
               <S.MenuItem
                 id={RoutesName.About}
-                isActive={currentRoute === RoutesName.About}
+                isactive={currentRoute === RoutesName.About.toString()}
                 onClick={onNavigate}
               >
                 {locales.about.toUpperCase()}
               </S.MenuItem>
               <S.MenuItem
                 id={RoutesName.Projects}
-                isActive={currentRoute === RoutesName.Projects}
+                isactive={currentRoute === RoutesName.Projects.toString()}
                 onClick={onNavigate}
               >
                 {locales.project.toUpperCase()}
               </S.MenuItem>
               <S.MenuItem
                 id={RoutesName.Contact}
-                isActive={currentRoute === RoutesName.Contact}
+                isactive={currentRoute === RoutesName.Contact.toString()}
                 onClick={onNavigate}
               >
                 {locales.contact.toUpperCase()}
