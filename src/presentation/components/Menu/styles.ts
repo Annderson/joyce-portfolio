@@ -5,7 +5,6 @@ import { FaHome } from 'react-icons/fa'
 import styled, { keyframes } from 'styled-components'
 import { Layout, Dimensions, Colors } from '@/styles'
 
-
 const fadeIn = keyframes`
   0% {
 		opacity: 0;
@@ -18,18 +17,23 @@ const fadeIn = keyframes`
 export const Container = styled.div`
   background-color: ${Colors.transparent};
   animation-name: ${fadeIn};
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
   display: flex;
   opacity: 1;
   overflow: hidden;
 `
 
-export const ContentContainer = styled.div`
+interface ContentContainerProps {
+  open: boolean
+}
+export const ContentContainer = styled.div<ContentContainerProps>`
   background-color: ${Colors.transparent};
   height: ${Dimensions.vh.sizeVh100};
   overflow-y: auto;
+  padding-top: ${({ open }) =>
+    open ? Dimensions.px.size0 : Dimensions.px.size50};
   width: ${Dimensions.per.sizeFull};
   &::-webkit-scrollbar {
     background-color: ${Colors.brown}55;
@@ -39,17 +43,25 @@ export const ContentContainer = styled.div`
     background-color: ${Colors.brown};
     border-radius: 5px;
   }
+
+  @media (max-width: 600px) {
+    padding-left: ${Dimensions.px.size0};
+    padding-top: ${Dimensions.px.size50};
+  }
 `
 
-export const MenuCloseContainer = styled.div`
-  display: flex;
-  background-color: #130;
-  box-shadow: 2px 0px 9px 1px #888;
-  height: ${Dimensions.vh.sizeVh100};
-  justify-content: center;
-  padding-top: ${Dimensions.px.size18};
+interface MenuProps {
+  color: string
+}
+
+export const MenuCloseContainer = styled(Layout.Container)<MenuProps>`
+  align-items: center;
+  background-color: ${({ color }) => (color ? color : '#130')};
+  box-shadow: 0px 0px 3px 1px #888;
+  height: ${Dimensions.px.size50};
+  padding-left: ${Dimensions.px.size10};
   position: fixed;
-  width: ${Dimensions.px.size50};
+  width: ${Dimensions.per.sizeFull};
   z-index: 5;
 `
 

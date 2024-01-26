@@ -3,8 +3,14 @@ import locales from '@/locales/menu'
 
 import * as S from './styles'
 import useMenu from './useMenu'
+import { ReactNode } from 'react'
 
-const Menu = ({ children }: any) => {
+interface Props {
+  children: ReactNode
+  color: string
+}
+
+const Menu = ({ children, color }: Props) => {
   const { open, currentRoute, onOpen, onNavigate } = useMenu()
 
   return (
@@ -51,13 +57,13 @@ const Menu = ({ children }: any) => {
           </S.MenuContainer>
         </S.MenuOpenContainer>
       ) : (
-        <S.MenuCloseContainer>
+        <S.MenuCloseContainer color={color}>
           <S.IconButton onClick={onOpen}>
             <S.MenuGridIcon />
           </S.IconButton>
         </S.MenuCloseContainer>
       )}
-      <S.ContentContainer>{children}</S.ContentContainer>
+      <S.ContentContainer open={open}>{children}</S.ContentContainer>
     </S.Container>
   )
 }
