@@ -6,7 +6,6 @@ import { BsArrowRightSquareFill } from 'react-icons/bs'
 
 export const Root = styled(Layout.ContainerVertical)`
   background-color: ${Colors.black};
-  padding-left: ${Dimensions.px.size50};
   overflow: hidden;
 `
 export const Container = styled(Layout.ContainerVertical)`
@@ -132,6 +131,7 @@ export const TabContainer = styled(Layout.CenteredHorizontal)`
   width: 100%;
 
   @media (max-width: 700px) {
+    grid-gap: ${Dimensions.px.size70};
     grid-template-columns: 100%;
   }
 `
@@ -190,7 +190,7 @@ export const Carousel = styled(CarouselCurrent)`
   .carousel .slide {
   }
   .control-next.control-arrow {
-    right: 50px;
+    //right: 50px;
   }
 `
 
@@ -221,6 +221,8 @@ export const SlideLegend = styled(Layout.CenteredVertical)`
   font-size: 30px;
   color: ${Colors.white};
   justify-content: center;
+  white-space: normal;
+  word-wrap: break-word;
   width: 100%;
   overflow: hidden;
 

@@ -21,7 +21,7 @@ import { RoutesName } from '@/main/routes/routesName'
 const Home = () => {
   const { onNavigate } = useHome()
   return (
-    <Menu>
+    <Menu color={Colors.black}>
       <S.Root>
         <S.Container>
           <S.PhotoContainer>
@@ -76,13 +76,13 @@ const Home = () => {
           autoPlay
           infiniteLoop
           showArrows
-          axis="vertical"
+          showStatus={false}
           showThumbs={false}
         >
           <S.Slide>
             <S.SlideImg src={tecnicas} />
             <S.SlideLegend>
-              Técnicas construtivas
+              Técnicas <br/> construtivas
               <S.RedirectAboutButton
                 onClick={() => onNavigate(RoutesName.Projects)}
               >
