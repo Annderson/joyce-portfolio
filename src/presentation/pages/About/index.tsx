@@ -2,26 +2,27 @@ import { FaDotCircle } from 'react-icons/fa'
 import Menu from '@/presentation/components/Menu'
 import { Colors } from '@/styles'
 import folder from '@/assets/img/folder3.jpeg'
+import locales from '@/locales/about'
 
 import * as S from './styles'
 import { knowledgeList, languagesList } from './helper'
 import Skills from './components/Skills'
 
 const About = () => (
-  <Menu>
+  <Menu color='#ff6d00'>
     <S.Root>
       <S.IntroductionContainer>
         <S.FolderImg src={folder} />
         <S.Header />
-        <S.IntroductionTitle>Introdução sobre mim</S.IntroductionTitle>
+        <S.IntroductionTitle>{locales.intruduceAboutMe}</S.IntroductionTitle>
         <S.IntroductionDescriptionContainer>
           <div>
             <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
               <S.HighlighterIcon />
               <S.IntroductionDescription>
                 Estudante em reta final de conclusão de curso superior, o curso
-                é de bacharelado em Arquitetura e Urbanismo com foco em design
-                de interiores pela universidade PUC-Campinas (PONTIFÍCIA
+                é de bacharelado em Arquitetura e Urbanismo com foco em
+                paisagismo pela universidade PUC-Campinas (PONTIFÍCIA
                 UNIVERSIDADE CATÓLICA DE CAMPINAS).
               </S.IntroductionDescription>
             </div>
@@ -58,9 +59,9 @@ const About = () => (
         </S.IntroductionDescriptionContainer>
       </S.IntroductionContainer>
       <S.SkillsContainer>
-        <S.IntroductionTitle>Habilidades</S.IntroductionTitle>
-        <Skills title='CONHECIMENTOS' data={knowledgeList}/>
-        <Skills title='IDIOMAS' data={languagesList}/>
+        <S.IntroductionTitle>{locales.skills}</S.IntroductionTitle>
+        <Skills title={locales.knowledge.toUpperCase()} data={knowledgeList} />
+        <Skills title={locales.languages.toUpperCase()} data={languagesList} />
       </S.SkillsContainer>
     </S.Root>
   </Menu>

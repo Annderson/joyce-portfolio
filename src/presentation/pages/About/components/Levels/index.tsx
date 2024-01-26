@@ -1,7 +1,6 @@
-import { Colors, Dimensions } from '@/styles'
 import { useMemo } from 'react'
-import { FaCircle } from 'react-icons/fa'
-import { FaRegCircle, FaCircleHalfStroke } from 'react-icons/fa6'
+
+import * as S from './styles'
 
 interface Props {
   level: number
@@ -11,32 +10,16 @@ const Levels = ({ level }: Props) => {
   const levelList = useMemo(() => {
     const list = []
     for (let i = 1; i <= 5; i++) {
-      if (i <= level)
-        list.push(
-          <FaCircle key={i} color={Colors.orange} size={Dimensions.px.size20} />
-        )
+      if (i <= level) list.push(<S.CircleFullIcon key={i} />)
       else if (i > level && level > i - 1)
-        list.push(
-          <FaCircleHalfStroke
-            key={i}
-            color={Colors.orange}
-            size={Dimensions.px.size20}
-          />
-        )
-      else
-        list.push(
-          <FaRegCircle
-            key={i}
-            color={Colors.orange}
-            size={Dimensions.px.size20}
-          />
-        )
+        list.push(<S.CircleHalfIcon key={i} />)
+      else list.push(<S.CircleEmptyIcon key={i} />)
     }
 
     return list
   }, [level])
 
-  return <div>{levelList}</div>
+  return <S.Container>{levelList}</S.Container>
 }
 
 export default Levels

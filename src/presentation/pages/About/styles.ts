@@ -6,7 +6,6 @@ import { Layout, Dimensions, Colors } from '@/styles'
 export const Root = styled(Layout.ContainerVertical)`
   background-color: ${Colors.orange}11;
   overflow: hidden;
-  padding-left: ${Dimensions.px.size50};
 `
 
 export const IntroductionContainer = styled(Layout.ContainerVertical)`

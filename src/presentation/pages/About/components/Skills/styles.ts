@@ -22,18 +22,11 @@ export const SkillsContentContainer = styled(Layout.CenteredHorizontal)`
   align-items: baseline;
   white-space: normal;
   max-width: 1300px;
+`
 
-  > div {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    grid-gap: 15px;
-    > div {
-      align-items: center;
-      display: flex;
-      grid-gap: 10px;
-    }
-  }
+export const SkillsContent = styled(Layout.ContainerVertical)`
+  align-items: center;
+  grid-gap: 15px;
 `
 
 export const SubTile = styled.h4`

@@ -15,14 +15,14 @@ const Skills = ({ data, title }: Props) => {
       </S.SkillsTitleContainer>
       <S.SkillsContentContainer>
         {data.map((item: any) => (
-          <div key={item.name}>
+          <S.SkillsContent key={item.name}>
             {item.src ? (
               <S.Logo src={item.src} alt={item.name} />
             ) : (
               <S.Text>{item.name}</S.Text>
             )}
             <Levels level={item.level}/>
-          </div>
+          </S.SkillsContent>
         ))}
       </S.SkillsContentContainer>
     </S.SkillsBody>
