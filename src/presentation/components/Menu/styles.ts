@@ -32,6 +32,7 @@ export const ContentContainer = styled.div<ContentContainerProps>`
   background-color: ${Colors.transparent};
   height: ${Dimensions.vh.sizeVh100};
   overflow-y: auto;
+  overflow-x: hidden;
   padding-top: ${({ open }) =>
     open ? Dimensions.px.size0 : Dimensions.px.size50};
   width: ${Dimensions.per.sizeFull};
