@@ -1,8 +1,10 @@
 import locales from '@/locales/projects'
-import techniques from '@/assets/imports/constructionTechniques'
-import techniquesB from '@/assets/imports/constructionTechniquesB'
-import park from '@/assets/imports/projectPark'
-import school from '@/assets/imports/projectSchool'
+import techniquesImg from '@/assets/imports/constructionTechniques'
+import techniquesBImg from '@/assets/imports/constructionTechniquesB'
+import parkImg from '@/assets/imports/projectPark'
+import schoolImg from '@/assets/imports/projectSchool'
+import urbanismImg from '@/assets/imports/urbanism'
+import installationsImg from '@/assets/imports/installations'
 
 interface GridInfo {
   description: string
@@ -15,28 +17,42 @@ export const projectPark: GridInfo = {
   description: locales.project,
   title: locales.exhibitionAndCultureSquare,
   text: locales.individualDevelopmentOfSquare,
-  slides: park,
+  slides: parkImg,
 }
 
 export const projectSchool: GridInfo = {
   description: locales.project,
   title: locales.schoolOfMedia,
   text: locales.projectDevelopedAsTeam,
-  slides: school,
+  slides: schoolImg,
 }
 
 export const constructionTechniques: GridInfo = {
   description: locales.materialsAndConstructionTechniques,
   title: locales.cubeHouse,
   text: locales.developmentandPlanningofCubeHouse,
-  slides: techniques,
+  slides: techniquesImg,
 }
 
 export const constructionTechniquesB: GridInfo = {
   description: locales.materialsAndConstructionTechniques,
   title: locales.ubsRecoverAction,
   text: locales.developmentandPlanningofCubeHouse,
-  slides: techniquesB,
+  slides: techniquesBImg,
+}
+
+export const urbanism: GridInfo = {
+  description: locales.urbanism,
+  title: locales.villaAurocan,
+  text: locales.studyCarriedOutOnAnAurocanNeighborhood,
+  slides: urbanismImg,
+}
+
+export const installations: GridInfo = {
+  description: locales.facilitiesAndEquipment,
+  title: locales.homePlanning,
+  text: locales.planningResidentialEnvironments,
+  slides: installationsImg,
 }
 
 export const gridInfos: GridInfo[] = [
@@ -44,4 +60,6 @@ export const gridInfos: GridInfo[] = [
   projectSchool,
   constructionTechniques,
   constructionTechniquesB,
+  urbanism,
+  installations
 ]

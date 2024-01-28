@@ -13,11 +13,17 @@ export default {
     levando em consideração os gastos, levantamento de materiais.
   `,
   exhibitionAndCultureSquare: 'Praça de exposição e cultura',
+  facilitiesAndEquipment: 'Instalações e equipamentos',
+  homePlanning: 'Planejamento residencial',
   individualDevelopmentOfSquare: `
     Desenvolvimento individual de uma praça que comportariam exposições 
     ao ar livre e que atendesse a demanda de estudantes, tendo em vista que a 
     localização se dá ao lado de uma universidade e no centro de um bairro para moradias estudantis.`,
   materialsAndConstructionTechniques: 'Materiais e Técnicas Construtivas',
+  planningResidentialEnvironments: `
+    Planejamento dos ambientes residenciais, visando toda a parte de instalações, tais como: 
+    Elétrica, instalações de águas quente e fria, águas pluviais, rede de esgoto e cisternas com água para reuso.
+  `,
   project: 'Projeto',
   projectDevelopedAsTeam: `
     Projeto desenvolvido em equipe onde o principal objetivo é restaurar uma antiga 
@@ -27,5 +33,8 @@ export default {
     total integração com o Carlos Gomes e neste anexo, foi projetado uma escola de 
     Mídias Digitais, onde toda a produção dos alunos pudessem ser expostas no antigo galpão.`,
   schoolOfMedia: 'Escola de mídias digitais e visuais',
-  ubsRecoverAction: 'UBS - Recuperar-ação'
+  studyCarriedOutOnAnAurocanNeighborhood: 'Estudo feito sobre um bairro chamado Aurocan em Campinas - S.P.',
+  ubsRecoverAction: 'UBS - Recuperar-ação',
+  urbanism: 'Urbanismo',
+  villaAurocan: 'Vila Aurocan - Campinas'
 }
