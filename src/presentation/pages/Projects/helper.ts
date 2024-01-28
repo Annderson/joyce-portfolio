@@ -37,7 +37,7 @@ export const constructionTechniques: GridInfo = {
 export const constructionTechniquesB: GridInfo = {
   description: locales.materialsAndConstructionTechniques,
   title: locales.ubsRecoverAction,
-  text: locales.developmentandPlanningofCubeHouse,
+  text: locales.developmentOfBasicHealthUnit,
   slides: techniquesBImg,
 }
 
