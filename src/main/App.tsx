@@ -6,7 +6,8 @@ import '@/assets/imports/constructionTechniques'
 import '@/assets/imports/constructionTechniquesB'
 import '@/assets/imports/projectPark'
 import '@/assets/imports/projectSchool'
-
+import '@/assets/imports/urbanism'
+import '@/assets/imports/installations'
 
 import Router from './routes'
 
