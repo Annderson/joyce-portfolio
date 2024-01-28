@@ -31,6 +31,7 @@ export default {
     size150: '150px',
     size170: '170px',
     size200: '200px',
+    size300: '300px',
   },
   vh: {
     sizeVh100: '100vh',

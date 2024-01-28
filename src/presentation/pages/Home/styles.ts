@@ -5,15 +5,15 @@ import { Layout, Dimensions, Colors } from '@/styles'
 import { BsArrowRightSquareFill } from 'react-icons/bs'
 
 export const Root = styled(Layout.ContainerVertical)`
-  background-color: ${Colors.black};
+  background: linear-gradient(180deg, ${Colors.black}, #0a0908, #242421, #353535);
   overflow: hidden;
 `
 export const Container = styled(Layout.ContainerVertical)`
   align-items: center;
-  justify-content: space-evenly;
-  background-color: ${Colors.black};
+  justify-content: space-between;
   color: ${Colors.black};
   height: ${Dimensions.vh.sizeVh100};
+  margin-bottom: ${Dimensions.px.size100};
   overflow: hidden;
   padding: 0px 0px 50px 0px;
   position: relative;
@@ -25,24 +25,23 @@ export const Container = styled(Layout.ContainerVertical)`
 `
 
 export const BackgroundImage = styled.img`
-  height: 100vh;
+  height: ${Dimensions.vh.sizeVh100};
   position: absolute;
-  width: 100%;
+  width: ${Dimensions.per.sizeFull};
   z-index: 1;
 `
 
-export const PhotoContainer = styled.div`
-  background-color: ${Colors.white};
-  border-radius: ${Dimensions.per.sizeHalf};
-  //box-shadow: 1px 1px 14px 3px #aaa;
-  height: ${Dimensions.px.size200};
-  margin-top: ${Dimensions.px.size40};
-  width: ${Dimensions.px.size200};
+export const PhotoContainer = styled(Layout.CenteredHorizontal)`
+  background: linear-gradient(90deg, #242421, #333533, #242423);
+  //border-radius: ${Dimensions.per.sizeHalf};
+  height: ${Dimensions.px.size300};
+  width: ${Dimensions.per.sizeFull};
   img {
-    border: ${Dimensions.px.size5} solid ${Colors.white};
+    border: ${Dimensions.px.size10} solid #000;
     border-radius: ${Dimensions.per.sizeHalf};
-    height: ${Dimensions.px.size200};
-    width: ${Dimensions.px.size200};
+    height: ${Dimensions.px.size300};
+    margin-bottom: -${Dimensions.px.size100};
+    width: ${Dimensions.px.size300};
   }
 `
 

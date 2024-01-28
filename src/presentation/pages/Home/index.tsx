@@ -29,7 +29,6 @@ const Home = () => {
           </S.PhotoContainer>
           <S.MyDataContainer>
             <img src={logo} alt="foto de rosto" />
-
             <div>
               <S.TextName>Joyce Abeid</S.TextName>
               <S.TextAge>30 anos, casada</S.TextAge>

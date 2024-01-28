@@ -14,10 +14,20 @@ const fadeIn = keyframes`
 	}
 `
 
+const openMenu = keyframes`
+  0% {
+    padding: ${Dimensions.px.size0};
+    width: ${Dimensions.px.size0};
+	}
+	100% {
+    padding: ${Dimensions.px.size16};
+    width: 250px;
+	}
+`
+
 export const Container = styled.div`
   background-color: ${Colors.transparent};
   animation-name: ${fadeIn};
-  animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 1.5s;
   display: flex;
@@ -84,6 +94,10 @@ export const MenuOpenContainer = styled.div`
 `
 
 export const BackgroundContainer = styled.div`
+  animation-name: ${fadeIn};
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
   background-color: ${Colors.black}aa;
   bottom: 0;
   left: 0;
@@ -95,6 +109,9 @@ export const BackgroundContainer = styled.div`
 
 export const MenuContainer = styled(Layout.ContainerVertical)`
   align-items: flex-end;
+  animation-name: ${openMenu};
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
   background-color: ${Colors.brown}dd;
   box-shadow: 2px 0px 9px 1px #888;
   color: ${Colors.white};
@@ -117,6 +134,9 @@ export const IconHomeContainer = styled.div`
 `
 
 export const IconButton = styled.div`
+  animation-name: ${fadeIn};
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
   display: flex;
   height: fit-content;
   :hover {
@@ -148,6 +168,9 @@ interface MenuItemProp {
   isactive: boolean
 }
 export const MenuItem = styled.h3<MenuItemProp>`
+  animation-name: ${fadeIn};
+  animation-timing-function: ease-in;
+  animation-duration: 2.5s;
   background-color: ${({ isactive }) =>
     isactive ? Colors.transparentBlack55 : Colors.transparent};
   padding: 5px 16px;
