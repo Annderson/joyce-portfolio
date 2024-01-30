@@ -39,6 +39,9 @@ export const ImgContainer = styled(Layout.CenteredHorizontal)`
   height: ${Dimensions.per.sizeFull};
   padding: ${Dimensions.px.size16};
   width: ${Dimensions.per.sizeFull};
+  @media (max-width: 700px) {
+    grid-template-columns: 100%;
+  }
 `
 
 export const ArrowBase = css`
@@ -46,6 +49,13 @@ export const ArrowBase = css`
   cursor: pointer;
   height: ${Dimensions.px.size40};
   width: ${Dimensions.px.size40};
+
+  @media (max-width: 700px) {
+    align-self: center;
+    height: ${Dimensions.px.size60};
+    justify-self: center;
+    width: ${Dimensions.px.size60};
+  }
 `
 
 export const ArrowBack = styled(MdArrowBackIos)`
