@@ -6,7 +6,7 @@ import schoolImg from '@/assets/imports/projectSchool'
 import urbanismImg from '@/assets/imports/urbanism'
 import installationsImg from '@/assets/imports/installations'
 
-interface GridInfo {
+export interface GridInfo {
   description: string
   title: string
   text: string
