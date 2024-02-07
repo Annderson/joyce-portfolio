@@ -8,12 +8,13 @@ import urbanist from '@/assets/img/urbanist.png'
 import inst from '@/assets/img/inst.png'
 import logo from '@/assets/svg/vite.svg'
 
+import TextIconGrid from '@/presentation/components/TextIconGrid'
 import Menu from '@/presentation/components/Menu'
+
 import { Colors, Dimensions } from '@/styles'
 import locales from '@/locales/home'
 
 import * as S from './styles'
-import TextIconGrid from './components/TextIconGrid'
 import { descriptionsAbout, TextIconType } from './helper'
 import useHome from './useHome'
 import { RoutesName } from '@/main/routes/routesName'

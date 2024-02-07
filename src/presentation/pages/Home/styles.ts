@@ -87,7 +87,7 @@ export const MyDataContainer = styled(Layout.Container)`
   }
 `
 
-export const TextName = styled.h2`
+export const TextName = styled.h1`
   align-items: center;
   display: flex;
   color: ${Colors.white};

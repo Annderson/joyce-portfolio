@@ -1,6 +1,7 @@
 export default {
   blue: '#2196F3',
   brown: '#A65E44',
+  brown35: '#352208',
   green: '#595302',
   green04: '#004400',
   yellow: '#F2BF5E',

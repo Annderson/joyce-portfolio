@@ -112,7 +112,7 @@ export const MenuContainer = styled(Layout.ContainerVertical)`
   animation-name: ${openMenu};
   animation-timing-function: ease-in;
   animation-duration: 1s;
-  background-color: ${Colors.brown}dd;
+  background-color: ${Colors.brown35}dd;
   box-shadow: 2px 0px 9px 1px #888;
   color: ${Colors.white};
   grid-gap: ${Dimensions.px.size50};
