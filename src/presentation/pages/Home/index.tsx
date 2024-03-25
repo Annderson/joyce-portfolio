@@ -1,7 +1,7 @@
 import { FcInfo } from 'react-icons/fc'
 import { HiPlus } from 'react-icons/hi'
 
-import photo from '@/assets/img/foto.jpeg'
+import photo from '@/assets/img/profile.jpeg'
 import tecnicas from '@/assets/img/tecnicas.png'
 import project from '@/assets/img/project.png'
 import urbanist from '@/assets/img/urbanist.png'
@@ -22,19 +22,20 @@ import { RoutesName } from '@/main/routes/routesName'
 const Home = () => {
   const { onNavigate } = useHome()
   return (
-    <Menu color={Colors.black}>
+    <Menu color={Colors.brown73}>
       <S.Root>
         <S.Container>
-          <S.PhotoContainer>
-            <img src={photo} alt="foto de rosto" />
-          </S.PhotoContainer>
-          <S.MyDataContainer>
-            <img src={logo} alt="foto de rosto" />
-            <div>
-              <S.TextName>Joyce Abeid</S.TextName>
-              <S.TextAge>30 anos, casada</S.TextAge>
-            </div>
-          </S.MyDataContainer>
+          <S.ProfileContainer>
+            <S.MyDataContainer>
+              <S.PhotoLogo src={logo} alt="foto do logo" />
+              <div>
+                <S.TextName>Joyce Abeid</S.TextName>
+                <S.TextAge>Arquitetura / Urbanismo / Paisagismo</S.TextAge>
+              </div>
+            </S.MyDataContainer>
+            <S.PhotoProfile src={photo} alt="foto de rosto" />
+          </S.ProfileContainer>
+
           <S.Description>{locales.description}</S.Description>
         </S.Container>
         <S.TabContainer>
@@ -43,10 +44,16 @@ const Home = () => {
               <S.TitleAbout>Para</S.TitleAbout>
               <HiPlus color={Colors.blue} size={Dimensions.px.size60} />
             </S.GridTextIconContainer>
-
             <FcInfo size={Dimensions.px.size60} />
-            <S.TitleAbout>Sobre</S.TitleAbout>
-            <S.SubTitleAbout>MIM</S.SubTitleAbout>
+            <S.TitleAbout>Sobre mim</S.TitleAbout>
+            <S.GridTextIconContainer>
+              <S.Description>Clique aqui</S.Description>
+              <S.RedirectAboutButton
+                onClick={() => onNavigate(RoutesName.About)}
+              >
+                <S.RedirectAboutIcon />
+              </S.RedirectAboutButton>
+            </S.GridTextIconContainer>
           </S.TabContainerAbout>
           <S.BackgroundTransparent>
             <S.SubTitleAbout>
@@ -61,14 +68,6 @@ const Home = () => {
                 />
               ))}
             </div>
-            <S.GridTextIconContainer>
-              <S.Description>Para saber mais clique aqui</S.Description>
-              <S.RedirectAboutButton
-                onClick={() => onNavigate(RoutesName.About)}
-              >
-                <S.RedirectAboutIcon />
-              </S.RedirectAboutButton>
-            </S.GridTextIconContainer>
           </S.BackgroundTransparent>
         </S.TabContainer>
         <S.Carousel
@@ -82,45 +81,45 @@ const Home = () => {
           <S.Slide>
             <S.SlideImg src={tecnicas} />
             <S.SlideLegend>
-              Técnicas <br/> construtivas
-              <S.RedirectAboutButton
+              Técnicas <br /> construtivas
+              <S.RedirectCurouselButton
                 onClick={() => onNavigate(RoutesName.Projects)}
               >
-                <S.RedirectAboutIcon />
-              </S.RedirectAboutButton>
+                <S.RedirectCorouselIcon />
+              </S.RedirectCurouselButton>
             </S.SlideLegend>
           </S.Slide>
           <S.Slide>
             <S.SlideImg src={project} />
             <S.SlideLegend>
               Projetos
-              <S.RedirectAboutButton
+              <S.RedirectCurouselButton
                 onClick={() => onNavigate(RoutesName.Projects)}
               >
-                <S.RedirectAboutIcon />
-              </S.RedirectAboutButton>
+                <S.RedirectCorouselIcon />
+              </S.RedirectCurouselButton>
             </S.SlideLegend>
           </S.Slide>
           <S.Slide>
             <S.SlideImg src={urbanist} />
             <S.SlideLegend>
               Urbanismo
-              <S.RedirectAboutButton
+              <S.RedirectCurouselButton
                 onClick={() => onNavigate(RoutesName.Projects)}
               >
-                <S.RedirectAboutIcon />
-              </S.RedirectAboutButton>
+                <S.RedirectCorouselIcon />
+              </S.RedirectCurouselButton>
             </S.SlideLegend>
           </S.Slide>
           <S.Slide>
             <S.SlideImg src={inst} />
             <S.SlideLegend>
               Instalações
-              <S.RedirectAboutButton
+              <S.RedirectCurouselButton
                 onClick={() => onNavigate(RoutesName.Projects)}
               >
-                <S.RedirectAboutIcon />
-              </S.RedirectAboutButton>
+                <S.RedirectCorouselIcon />
+              </S.RedirectCurouselButton>
             </S.SlideLegend>
           </S.Slide>
         </S.Carousel>

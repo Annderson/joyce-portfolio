@@ -5,7 +5,10 @@ import sketchup from '@/assets/img/sketchup.png'
 import illustrator from '@/assets/img/illustrator.webp'
 import photoshop from '@/assets/img/photoshop.png'
 import revit from '@/assets/img/revit.png'
-
+import google from '@/assets/img/google.png'
+import canva from '@/assets/img/canva.png'
+import vray from '@/assets/img/vray.png'
+import arcgis from '@/assets/img/arcgis.png'
 
 export interface SkillType {
   name: string
@@ -20,8 +23,18 @@ export const knowledgeList: SkillType[] = [
     level: 5,
   },
   {
+    name: 'Canva',
+    src: canva,
+    level: 5,
+  },
+  {
     name: 'Lumion',
     src: lumion,
+    level: 4,
+  },
+  {
+    name: 'Google Earth',
+    src: google,
     level: 4,
   },
   {
@@ -45,6 +58,16 @@ export const knowledgeList: SkillType[] = [
     level: 3,
   },
   {
+    name: 'Arcgis',
+    src: arcgis,
+    level: 2,
+  },
+  {
+    name: 'Vray',
+    src: vray,
+    level: 2,
+  },
+  {
     name: 'Autodesk Revit',
     src: revit,
     level: 1.5,
@@ -52,10 +75,6 @@ export const knowledgeList: SkillType[] = [
 ]
 
 export const languagesList: SkillType[] = [
-  {
-    name: 'Postuguês',
-    level: 5
-  },
   {
     name: 'Inglês',
     level: 4.5

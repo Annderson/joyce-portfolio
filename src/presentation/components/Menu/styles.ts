@@ -68,7 +68,7 @@ interface MenuProps {
 export const MenuCloseContainer = styled(Layout.Container)<MenuProps>`
   align-items: center;
   background-color: ${({ color }) => (color ? color : '#130')};
-  box-shadow: 0px 0px 3px 1px #888;
+  // box-shadow: 0px 0px 3px 1px #888;
   height: ${Dimensions.px.size50};
   padding-left: ${Dimensions.px.size10};
   position: fixed;

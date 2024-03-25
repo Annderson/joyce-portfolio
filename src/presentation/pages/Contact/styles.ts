@@ -55,7 +55,8 @@ export const SubTitle = styled.h2`
 `
 
 export const CardContact = styled.div`
-  background-color: #344e41aa;
+  // background-color: #344e41aa;
+  background-color: ${Colors.brown73}55;
   //border-radius: 8px;
   display: grid;
   grid-template-columns: 50% 50%;

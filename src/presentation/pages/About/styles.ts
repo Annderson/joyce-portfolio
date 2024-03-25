@@ -4,7 +4,7 @@ import { TbArrowBadgeRightFilled } from 'react-icons/tb'
 import { Layout, Dimensions, Colors } from '@/styles'
 
 export const Root = styled(Layout.ContainerVertical)`
-  background-color: ${Colors.orange}11;
+  background-color: ${Colors.bege};
   overflow: hidden;
 `
 
@@ -15,16 +15,15 @@ export const IntroductionContainer = styled(Layout.ContainerVertical)`
 `
 
 export const Header = styled.div`
-  background-color: ${Colors.orange};
+  background-color: ${Colors.brown73};
   height: ${Dimensions.px.size70};
   width: 100%;
   z-index: 2;
 `
-  
 
 export const IntroductionTitle = styled.h3`
-  background-color: ${Colors.orange}55;
-  color: ${Colors.black};
+  background-color: ${Colors.brown73};
+  color: ${Colors.bege};
   font-size: ${Dimensions.px.size50};
   font-weight: 500;
   padding: ${Dimensions.px.size50} ${Dimensions.px.size12};
@@ -67,7 +66,7 @@ export const FolderImg = styled.img`
 `
 
 export const HighlighterIcon = styled(TbArrowBadgeRightFilled)`
-  color: ${Colors.orange};
+  color: ${Colors.redDf};
   height: ${Dimensions.px.size40};
   width: ${Dimensions.px.size40};
 `

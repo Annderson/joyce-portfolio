@@ -9,7 +9,7 @@ import background from '@assets/img/contact4.jpeg'
 import * as S from './styles'
 
 const Contact = () => (
-  <Menu color={Colors.black}>
+  <Menu color={Colors.brown35}>
     <S.Container>
       {<S.BackgroundImg src={background} />}
       <S.CardContact>

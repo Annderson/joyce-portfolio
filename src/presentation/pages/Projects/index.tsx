@@ -11,7 +11,7 @@ import useProject from './useProject'
 const Projects = () => {
   const { open, imagesSelected, handleOpen, onExpendImages } = useProject()
   return (
-    <Menu color={Colors.black}>
+    <Menu color={Colors.brown73}>
       <Modal openModal={open} images={imagesSelected} onClose={handleOpen} />
       <S.Container>
         <S.Title>Meus trabalhos</S.Title>

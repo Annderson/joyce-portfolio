@@ -9,11 +9,11 @@ import { knowledgeList, languagesList } from './helper'
 import Skills from './components/Skills'
 
 const About = () => (
-  <Menu color='#ff6d00'>
+  <Menu color={Colors.brown73}>
     <S.Root>
       <S.IntroductionContainer>
         <S.FolderImg src={folder} />
-        <S.Header />
+        {/*<S.Header />*/}
         <S.IntroductionTitle>{locales.intruduceAboutMe}</S.IntroductionTitle>
         <S.IntroductionDescriptionContainer>
           <div>
@@ -44,14 +44,14 @@ const About = () => (
                 alguns em que estive envolvida e está um pouco mais ligada com
                 as aréas que são foco desse portifolio, como artes, arquitetura
                 e urbanismo: <br />
-                <FaDotCircle color={Colors.orange} size={15} /> &nbsp; Discuções
+                <FaDotCircle color={Colors.redDf} size={15} /> &nbsp; Discuções
                 sobre o desenvolvimento do bairro e processos de regulamentação{' '}
                 <br />
-                <FaDotCircle color={Colors.orange} size={15} /> &nbsp; Processos
+                <FaDotCircle color={Colors.redDf} size={15} /> &nbsp; Processos
                 de regulamentação e infraestrutura do bairro <br />
-                <FaDotCircle color={Colors.orange} size={15} /> &nbsp; Design de
+                <FaDotCircle color={Colors.redDf} size={15} /> &nbsp; Design de
                 folders e panfletos <br />
-                <FaDotCircle color={Colors.orange} size={15} /> &nbsp; Trabalhos
+                <FaDotCircle color={Colors.redDf} size={15} /> &nbsp; Trabalhos
                 artisticos e culturais com crianças
               </S.IntroductionDescription>
             </div>

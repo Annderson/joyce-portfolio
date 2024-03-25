@@ -1,18 +1,17 @@
 import styled from 'styled-components'
 import { Carousel as CarouselCurrent } from 'react-responsive-carousel'
-
 import { Layout, Dimensions, Colors } from '@/styles'
 import { BsArrowRightSquareFill } from 'react-icons/bs'
 
 export const Root = styled(Layout.ContainerVertical)`
-  background: linear-gradient(180deg, ${Colors.black}, #0a0908, #242421, #353535);
+  background-color: ${Colors.bege};
   overflow: hidden;
 `
 export const Container = styled(Layout.ContainerVertical)`
   align-items: center;
   justify-content: space-between;
   color: ${Colors.black};
-  height: ${Dimensions.vh.sizeVh100};
+  min-height: ${Dimensions.vh.sizeVh100};
   margin-bottom: ${Dimensions.px.size100};
   overflow: hidden;
   padding: 0px 0px 50px 0px;
@@ -20,7 +19,8 @@ export const Container = styled(Layout.ContainerVertical)`
 
   @media (max-width: 700px) {
     height: 100%;
-    grid-gap: 40px;
+    grid-gap: 120px;
+    margin-bottom: ${Dimensions.px.size100};
   }
 `
 
@@ -31,27 +31,41 @@ export const BackgroundImage = styled.img`
   z-index: 1;
 `
 
-export const PhotoContainer = styled(Layout.CenteredHorizontal)`
-  background: linear-gradient(90deg, #242421, #333533, #242423);
-  //border-radius: ${Dimensions.per.sizeHalf};
-  height: ${Dimensions.px.size300};
+export const ProfileContainer = styled(Layout.CenteredHorizontal)`
+  background-color: ${Colors.brown73};
+  min-height: ${Dimensions.px.size300};
+  padding: 0 16px;
   width: ${Dimensions.per.sizeFull};
-  img {
-    border: ${Dimensions.px.size10} solid #000;
-    border-radius: ${Dimensions.per.sizeHalf};
-    height: ${Dimensions.px.size300};
-    margin-bottom: -${Dimensions.px.size100};
-    width: ${Dimensions.px.size300};
+  @media (max-width: 700px) {
+    flex-direction: column;
   }
 `
 
+export const PhotoLogo = styled.img`
+  height: 180px;
+  margin-bottom: -${Dimensions.px.size100};
+  margin-right: 16px;
+  width: 150px;
+  @media (max-width: 700px) {
+    height: 130px;
+    width: 150px;
+  }
+`
+
+export const PhotoProfile = styled.img`
+  border: ${Dimensions.px.size10} solid ${Colors.bege};
+  height: ${Dimensions.px.size300};
+  margin-bottom: -${Dimensions.px.size100};
+  width: ${Dimensions.px.size300};
+`
+
 export const Description = styled.h4`
-  color: ${Colors.white};
+  color: ${Colors.gray};
   font-size: ${Dimensions.px.size25};
-  font-family: 'Voltaire';
+  font-family: 'Rajdhani-Regular';
   line-height: 40px;
   text-align: center;
-  max-width: 50%;
+  max-width: 70%;
   width: 100%;
 
   @media (max-width: 700px) {
@@ -68,17 +82,8 @@ export const MyDataContainer = styled(Layout.Container)`
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    grid-gap: 40px;
+    grid-gap: 110px;
     margin: 30px auto;
-  }
-
-  img {
-    height: 180px;
-    width: 200px;
-    @media (max-width: 700px) {
-      height: 130px;
-      width: 150px;
-    }
   }
 
   > div {
@@ -89,8 +94,9 @@ export const MyDataContainer = styled(Layout.Container)`
 
 export const TextName = styled.h1`
   align-items: center;
+  color: ${Colors.bege};
   display: flex;
-  color: ${Colors.white};
+  // color: ${Colors.brownF2};
   font-size: ${Dimensions.px.size60};
   font-weight: 500;
   line-height: 50px;
@@ -101,8 +107,9 @@ export const TextName = styled.h1`
 `
 
 export const TextAge = styled.h4`
-  color: ${Colors.white};
-  font-size: ${Dimensions.px.size30};
+  color: ${Colors.bege};
+  font-size: ${Dimensions.px.size25};
+  font-family: 'Voltaire';
   font-weight: 100;
   line-height: 30px;
   text-align: left;
@@ -112,7 +119,8 @@ export const TextAge = styled.h4`
 `
 
 export const BackgroundTransparent = styled(Layout.CenteredVertical)`
-  background-color: ${Colors.orange};
+  color: white !important;
+  background-color: ${Colors.brown73};
   justify-content: space-evenly;
   height: 100%;
   padding: 25px;
@@ -124,18 +132,20 @@ export const BackgroundTransparent = styled(Layout.CenteredVertical)`
 `
 
 export const TabContainer = styled(Layout.CenteredHorizontal)`
-  height: ${Dimensions.vh.sizeVh100};
   display: grid;
   grid-template-columns: 50% 50%;
+  min-height: 100vh;
   width: 100%;
 
   @media (max-width: 700px) {
     grid-gap: ${Dimensions.px.size70};
     grid-template-columns: 100%;
+    // margin-bottom: 58px;
   }
 `
 
 export const TabContainerAbout = styled(Layout.CenteredVertical)`
+  color: black !important;
   grid-gap: ${Dimensions.px.size40};
 `
 
@@ -144,8 +154,9 @@ export const GridTextIconContainer = styled(Layout.CenteredHorizontal)`
 `
 
 export const TitleAbout = styled.h2`
-  color: ${Colors.white};
+  color: ${Colors.gray};
   font-size: ${Dimensions.px.size60};
+  font-family: 'Rajdhani-SemiBold';
   font-weight: 500;
   line-height: 30px;
 `
@@ -161,22 +172,44 @@ export const SubTitleAbout = styled.h2`
 export const RedirectAboutButton = styled.button`
   background-color: ${Colors.transparent};
   border: none;
-  color: ${Colors.white};
+  color: ${Colors.brown73};
   :hover {
-    color: ${Colors.transparentWhiteAa};
+    color: ${Colors.brown73}BB;
   }
 `
 
-export const RedirectAboutIcon = styled(BsArrowRightSquareFill)`
+export const RedirectCurouselButton = styled.button`
+  background-color: ${Colors.transparent};
+  border: none;
+  color: ${Colors.white};
+  :hover {
+    color: ${Colors.white}BB;
+  }
+`
+
+export const RedirectCorouselIcon = styled(BsArrowRightSquareFill)`
   border-radius: 8px;
-  box-shadow: 0px 0px 3px 1px #555;
+  box-shadow: 1px 1px 3px 1px #555;
   color: ${Colors.white};
   cursor: pointer;
   height: ${Dimensions.px.size60};
   width: ${Dimensions.px.size60};
 
   :hover {
-    color: ${Colors.transparentWhiteAa};
+    color: ${Colors.white}BB;
+  }
+`
+
+export const RedirectAboutIcon = styled(BsArrowRightSquareFill)`
+  border-radius: 8px;
+  box-shadow: 0px 0px 3px 1px #555;
+  color: ${Colors.brown73};
+  cursor: pointer;
+  height: ${Dimensions.px.size60};
+  width: ${Dimensions.px.size60};
+
+  :hover {
+    color: ${Colors.brown73}BB;
   }
 `
 

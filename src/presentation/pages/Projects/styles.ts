@@ -4,8 +4,14 @@ import { Colors, Dimensions, Layout } from '@/styles'
 
 export const Container = styled(Layout.ContainerVertical)`
   align-items: center;
-  background: linear-gradient(0deg, #231104, #210f04, #352208, #0a0908);
-  color: ${Colors.white};
+  background: linear-gradient(
+    0deg,
+    ${Colors.brown73},
+    #210f04,
+    #352208,
+    ${Colors.brown73}
+  );
+  color: ${Colors.bege};
   grid-gap: ${Dimensions.px.size20};
   overflow: hidden;
   padding: ${Dimensions.px.size35} ${Dimensions.px.size20};
